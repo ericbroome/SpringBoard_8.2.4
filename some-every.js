@@ -48,10 +48,15 @@ Examples:
     hasNoDuplicates([1,2,3,1]) // false
     hasNoDuplicates([1,2,3]) // true
 */
-//Although this is about some and every, I believe a much more effective way is to use Set
+//Although this is about some and every, I believe a much more effective way is to use Set since I'd probably want to actually USE a collection of unique elements
 function hasNoDuplicates(arr) {
     let set = new Set(arr);
     return set.size === arr.length;
+    /* The "every" way
+    return arr.every((element) => {
+        return arr.indexOf(element) === arr.lastIndexOf(element);
+    });
+    */
 }
 
 /*
